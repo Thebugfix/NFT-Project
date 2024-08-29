@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-nav{
+    margin-top: 80px;
+    width: 90vw;
+    border: 1px solid orange;
+}
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.profile-navLink a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}
