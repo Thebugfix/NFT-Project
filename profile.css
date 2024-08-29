@@ -1,23 +1,326 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.profile-nav{
+:root {
+    /* Common colors */
+    --primary-purple: #7B61FF;
+    --green: #31C48D;
+    --red: #FF6B6B;
+    --yellow: #FFC107;
+    --chart-blue: #3498DB;
+
+    /* Dark theme */
+    --dark-bg: #0D0B21;
+    --dark-card-bg: #191537;
+    --dark-sidebar-bg: #110E2D;
+    --dark-text: #FFFFFF;
+    --dark-secondary-purple: #9C91FE;
+
+    /* Light theme */
+    --light-bg: #FFFFFF;
+    --light-card-bg: #F8F9FA;
+    --light-text: #000000;
+    --light-secondary-text: #6C757D;
+    --light-border: #E9ECEF;
+}
+
+.profile-nav {
     margin-top: 80px;
-    width: 90vw;
-    border: 1px solid orange;
+    width: 88vw;
 }
 
-.profile-info{
+.profile-info {
     display: flex;
     justify-content: space-between;
     padding-right: 20px;
 }
 
-.profile-navLink a{
+.welcome {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.profile-navLink a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
+    line-height: 21px;
+}
+
+.main-data {
+    display: flex;
+    justify-content: start;
+    width: 88vw;
+}
+
+.profile-data {
+    width: 380px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    background-color: var(--dark-card-bg);
+}
+
+.light-theme .profile-data {
+    background-color: var(--light-card-bg);
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    object-fit: cover;
+}
+
+.profile-data h3,
+.following h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding-bottom: 10px;
+}
+
+.profile-data p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 20px;
+}
+
+.security {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-option1 i,
+.security-option2 i {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 16px;
+    margin-right: 10px;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.security-option1 i {
+    background-color: #50BB25;
+    border-radius: 50%;
+}
+
+.security-option1,
+.security-option2 {
+    color: #6F4FF2;
+}
+
+.security-option2 i {
+    background-color: #6F4FF2;
+    border-radius: 50%;
+}
+
+hr {
+    height: 1px;
+    color: #D6DBDE;
+    background: #D6DBDE;
+    margin: 10px 0 10px 0;
+    font-size: 0;
+    border: 0.2px;
+}
+
+.following {
+    width: 740px;
+    height: 220px;
+    margin-top: 100px;
+}
+
+.following h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.follow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.follow-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 350px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--dark-card-bg);
+}
+
+.light-theme .follow-card {
+    background-color: var(--light-card-bg);
+}
+
+.follow-cardImg {
+    margin-right: 20px;
+}
+
+.user-avatar2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 200px;
+}
+
+.card-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.card-data {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.btn {
+    width: 80px;
+    border: none;
+    border-radius: 15px;
+    background-color: #dc3546;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px;
+    cursor: pointer;
+    color: var(--dark-text);
+    transition: 0.2s ease-in;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    background-color: #f11127;
+}
+
+/* bought style */
+.bought,
+.bought2 {
+    display: flex;
+    flex-direction: column;
+    width: 88vw;
+    height: 320px;
+    margin-top: 20px;
+}
+
+.bought h3, .bought2 h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding-bottom: 20px;
+}
+
+.main-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 280px;
+    height: 260px;
+    padding: 20px;
+    background-color: var(--dark-card-bg);
+    border-radius: 15px;
+}
+
+.light-theme .card {
+    background-color: var(--light-card-bg);
+}
+
+.card-image {
+    width: 100%;
+    height: 187px;
+    border-radius: 15px;
+}
+
+.card-image .nft-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.profile-pic {
+    position: relative;
+    bottom: 30px;
+    left: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-data {
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .profile-data {
+        width: 100%;
+        height: 320px;
+        padding: 10px;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .following {
+        width: 100%;
+        height: 428px;
+        margin-top: 10px;
+    }
+
+    .follow {
+        grid-template-columns: 1fr;
+    }
+
+    .bought,.bought2 {
+        height: 1100px;
+    }
+
+    .main-card {
+        flex-direction: column;
+        flex-grow: 2;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card {
+        margin-bottom: 5px;
+    }
+    .bought2{
+        margin-bottom: 100px;
+    }
 }

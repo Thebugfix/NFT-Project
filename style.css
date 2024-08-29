@@ -769,6 +769,7 @@ hr {
 
     .recent-activity, .top-creators{
         width: 350px;
+        overflow: hidden;
     }
 
     .card-detail{
